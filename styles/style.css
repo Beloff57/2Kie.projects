@@ -19,35 +19,36 @@ body {
   margin: 0; 
   padding: 0;
   box-sizing: border-box;
-  margin-bottom: 98px;
+  margin-bottom: 8.75vw;
   overflow: hidden;
 }
 
 .left-scrollable {
-  max-width: calc(100% - 426px - 0px); 
-  padding: 18px 20px;
-  padding-right: 0px;
+  width:69vw; 
+  padding: 0.75vw 0.813vw;
+  padding-right: 0vw;
   box-sizing: border-box;
   height: 100%;
 }
 
 .photo-block {
-  width: 1032px; /* Ширина блока */
+  width: 68vw; /* Ширина блока */
   margin: 0 auto; /* Центрируем блок */
 }
 
 .row-1, .row-3 {
-  width: 1052px;
+  width: 68vw;
   display: flex; /* Располагаем фото в ряд */
   justify-content: space-between; /* Распределяем фото с отступами */
-  margin-bottom: 20px; /* Отступ между рядами (при необходимости) */
-    margin-right: 20px;
+  margin-bottom: 0.375vw; /* Отступ между рядами (при необходимости) */
+    margin-right: 0vw;
+  gap: 0.5vw;
 }
 
 .row-2 {
 
   text-align: center; /* Центрируем растянутое фото */
-  margin-bottom: 20px;
+  margin-bottom: 0.375vw;
 }
 
 .photo-506 {
@@ -116,11 +117,9 @@ body {
   overflow: hidden;          /* главное: обрезаем изображение за пределами контейнера */
   border-radius: 10px;        /* если нужно закругление */
   display: block;
-  width: 100%;
+  width: 68vw;
   height: 100%;
-
-  
-  margin-right: 20px; /* Отступы между элементами */
+  margin-right: 0vw; /* Отступы между элементами */
 }
 
 /* картинка растягиваем по контейнеру и готовим к трансформации */
@@ -142,13 +141,19 @@ body {
   transform: scale(1.12);    /* увеличиваем на 12% */
 }
 
-
-
-/* Группа кнопок внизу справа */
 .button-group {
   position: absolute;
-  bottom: 16px;      /* Отступ от нижнего края картинки */
-  left: 16px;     /* Отступ от правого края картинки */
+  bottom: 19.1vw;      /* Отступ от нижнего края картинки */
+  left: 0.5vw;     /* Отступ от правого края картинки */
+  display: flex;
+  gap: 5px;        /* Расстояние между кнопками */
+  flex-direction:row; /* Кнопки вертикально */
+}
+
+.button-group-2 {
+  position: absolute;
+  bottom: 18.8vw;      /* Отступ от нижнего края картинки */
+  left: 0.5vw;     /* Отступ от правого края картинки */
   display: flex;
   gap: 5px;        /* Расстояние между кнопками */
   flex-direction:row; /* Кнопки вертикально */
@@ -157,24 +162,24 @@ body {
 /* Базовая стилизация кнопок */
 .btn-drk {
   font-family: var(--krona);
-  padding: 9px 13px;
+  padding: 0.375vw 0.813vw;
   background-color: #2D2D2D;
   color: white;
   text-decoration: none;
-  border-radius: 13px;
-  font-size: 12px;
+  border-radius: 0.563vw;
+  font-size: 0.75vw;
   white-space: nowrap;
   transition: background-color 0.3s ease;
 }
 
 .btn-wht {
   font-family: var(--krona);
-  padding: 9px 13px;
+  padding: 0.375vw 0.813vw;
   background-color: #FFFFFF;
   color: #2D2D2D;
   text-decoration: none;
-  border-radius: 13px;
-  font-size: 12px;
+  border-radius: 0.563vw;
+  font-size: 0.75vw;
   white-space: nowrap;
   transition: background-color 0.3s ease;
 }
@@ -194,7 +199,7 @@ body {
   position: fixed; 
   right: 0;
   top: 0;
-  width: 426px;
+  width: 30vw;
   height: 100vh; 
   background-color: #D4D5DE;
   padding: 0px;
@@ -204,10 +209,10 @@ body {
 .nav-wrapper {
   display: flex;
   align-items: center;
-  justify-content: flex-end; 
-  gap: 20px; 
-  padding-top: 16px; 
-  padding-right: 19px;
+  gap: 1.25vw; 
+  padding-top: 1.063vw; 
+  padding-right: 0.688vw;
+  margin-left: 3.063vw;
 }
 
 .vertical-links {
@@ -216,7 +221,7 @@ body {
 }
 
 .nav-link {
-  font-size: 13px;
+  font-size: 0.813vw;
     font-family: var(--montserrat);
     line-height: 99.9%;
     letter-spacing: -5%;
@@ -237,11 +242,11 @@ body {
 
 .telegram-link {
     font-family: var(--montserrat);
-    font-size: 14px;
+    font-size: 0.875vw;
     line-height: 113%;
   display: inline-flex;
   align-items: center;
-  padding: 7px 13px; 
+  padding: 0.544vw 0.792vw; 
   border: 1px solid #2D2D2D; 
   border-radius: 23.5px; 
   background-color: #D4D5DE; 
@@ -256,38 +261,43 @@ body {
 }
 
 .right-static .logo-block {
-  margin-top: 6px;
+  margin-top: 0.375vw;
   align-items: center;
-  margin-left: 0px;
-  margin-right: 105px;
+  margin-left: 0vw;
+  margin-right: 7.313vw;
 }
 
 .right-static .logo-block img {
-  width: 82.07px;
-  height: 37px;
+  width: 5.129vw;
+  height: 2.313vw;
 }
 
 .zag-proj {
   display: flex;
+  align-items: center;
+  margin-left: 3.063vw;
 }
 
 .ar-cont {
-  margin-top: 10px;
+  margin-top: 0.4vw;
   display: inline-block; /* Чтобы корректно работали размеры */
   transition: transform 0.3s ease; /* Плавный переход для масштабирования */
 }
 
-.zag-proj img {
-  margin-left: 20px;
-  padding: 11.44px 7.2px;
-  width: 16px;
-  background-color: #D4D5DE;
-  border: 1px solid #2D2D2D;
-  border-radius: 23.5px;
-  display: block;
-  margin-top: 22px;
-  transition: transform 0.3s ease, width 0.3s ease;
-  transform-origin: center; /* Точка трансформации — центр */
+.icon-wrap-1 {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0.44vw;            
+  box-sizing:border-box;    
+  border:1px solid #2D2D2D;
+  border-radius:2vw;
+  margin-left: 2vw;
+}
+
+.icon-wrap-1 .arrow-icon-1 {
+  width: 1vw;
+  height: 1vw;
 }
 
 /* Эффекты при наведении */
@@ -296,20 +306,21 @@ body {
 }
 
 .ar-cont:hover img {
-  width: 20px; /* Увеличиваем ширину стрелки */
+  width: 1vw; /* Увеличиваем ширину стрелки */
   transform: scale(1.05); /* Дополнительно масштабируем изображение */
 }
 
 .projects-filter h3 {
   margin-top: 25px;
-  line-height: 113.9%;
-  font-weight: 400;
-  font-family: var(--krona);
+  line-height: 114.2%;
+  font-weight: 700;
+  font-family: var(--montserrat);
   margin-bottom: 20px;
-  font-size: 40px;
+  font-size: 2.5vw;
   color: #333333;
-  padding-left: 23px;
+  padding-left: 0vw;
   padding-bottom: 0px;
+  text-transform: uppercase;
 }
 
 .filter-list {
@@ -317,13 +328,15 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  padding-left: 23px;
+  gap: 0.313vw;
+  padding-left: 0vw;
   padding-bottom: 292px;
+  width: 20vw;
+  margin-left: 3.063vw;
 }
 
 .filter-btn {
-  margin-bottom: 5px;
+  margin-bottom: 0.313vw;
   color: #2D2D2D;
   text-decoration: none;
   line-height: 113.9%;
@@ -334,7 +347,7 @@ body {
   padding: 6.09px 15.33px;
   background-color: #ffffff;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 0.875vw;
   transition: background-color 0.3s, ease, color 0.3s ease;
 }
 
@@ -344,7 +357,7 @@ body {
 }
 
 .filter-btn-2 {
-  margin-bottom: 5px;
+  margin-bottom: 0.313vw;
   color: #2D2D2D;
   text-decoration: none;
   line-height: 113.9%;
@@ -355,7 +368,7 @@ body {
   padding: 6.09px 13.22px;
   background-color: #ffffff;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 0.875vw;
   transition: background-color 0.3s, ease, color 0.3s ease;
 }
 
@@ -365,7 +378,7 @@ body {
 }
 
 .filter-btn-3 {
-  margin-bottom: 5px;
+  margin-bottom: 0.313vw;
   color: #2D2D2D;
   text-decoration: none;
   line-height: 113.9%;
@@ -376,7 +389,7 @@ body {
   padding: 6.09px 11px;
   background-color: #ffffff;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 0.875vw;
   transition: background-color 0.3s, ease, color 0.3s ease;
 }
 
@@ -386,7 +399,7 @@ body {
 }
 
 .filter-btn-4 {
-  margin-bottom: 5px;
+  margin-bottom: 0.313vw;
   color: #2D2D2D;
   text-decoration: none;
   line-height: 113.9%;
@@ -397,7 +410,7 @@ body {
   padding: 6.09px 14px;
   background-color: #ffffff;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 0.875vw;
   transition: background-color 0.3s, ease, color 0.3s ease;
 }
 
@@ -406,103 +419,87 @@ body {
   color: #FFFFFF;
 }
 
-.button-container {
-  margin-left: 23px;
-  display: inline-flex;
-  border-radius: 23.5px;
-  overflow: hidden;
-  position: relative;
-  gap: 4px;
-}
-
-.button-left,
-.button-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-decoration: none;
-  position: relative;
-  z-index: 1;
-}
-
-.button-left {
-  line-height: 113.9%;
-  letter-spacing: 0%;
-  font-weight: 600;
+.price-mot-3 {
   font-family: var(--montserrat);
-  font-size: 14px;
-  padding: 8.09px 20.18px;
-  background-color: #2D2D2D;
-  border-radius: 23.5px;
+  font-weight: 500;
+  font-size: 1.125vw;
+  line-height: 114.2%;
+  letter-spacing: -4%;
+  display: flex; /* делаем flex-контейнер для выравнивания текста и стрелки */
+  align-items: center; /* центрируем элементы по вертикали */
+  justify-content: space-between; /* распределяем текст и стрелку по краям */
+  padding-left: 1.063vw;
+  background: transparent; /* фон прозрачный, как на скрине */
+  border: 1px solid #2D2D2D; /* обводка кнопки */
+  border-radius: 2vw; /* скругление углов */
+  text-decoration: none; /* убираем подчёркивание ссылки */
+  color: #2D2D2D; /* цвет текста */
+  width: 18.625vw; /* занимает всю доступную ширину */
+  box-sizing: border-box; /* включаем отступы в ширину элемента */
+  cursor: pointer; /* курсор "рука" при наведении */
+  margin-left: 3.063vw;
 }
 
-.button-right {
-    padding: 7px 7px;
-  background-color: #2D2D2D;
-  border-radius: 23.5px;
+.icon-wrap-2 {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0.75vw;            
+  box-sizing:border-box;    
+  border:1px solid #2D2D2D;
+  border-radius:2vw;
+  margin-left: 10%;
 }
 
-/* Фоновый градиент (скрытый изначально) */
-.button-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%; /* Двойная ширина для плавного перехода */
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    #2D2D2D 0%,
-    #2D2D2D 50%,
-    transparent 50%,
-    transparent 100%
-  );
-  z-index: 0;
-  transition: transform 0.25s ease;
-  transform: translateX(-50%); /* Сдвигаем влево (скрываем левую половину) */
-}
-
-/* При наведении — плавно сдвигаем градиент вправо */
-.button-container:hover::before {
-  transform: translateX(0); /* Возвращаем в исходное положение */
-}
-
-.separator {
-  width: 330px;
-  border-bottom: 0.5px solid #2D2D2D;
-  margin-top: 30px;
-  margin-right: 0;
-  margin-bottom: 0px;
-  margin-left: 23px;
-  margin-bottom: 20px;
+.icon-wrap-2 .arrow-icon-2 {
+  width: 0.796vw;
+  height: 0.796vw;
 }
 
 .contact-block {
   font-family: var(--krona);
   text-align:left;
-  margin-top: 20px;
-  margin-left: 23px;
+  margin-top: 0.625vw;
+  margin-left: 3.063vw;
 }
 
-.contact-block p {
-  line-height: 113.9%;
-  margin-top: -3px;
-  margin-bottom: 15.05px;
-  font-size: 14px;
-  color: #2D2D2D;
+.social-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.75vw;
 }
 
 .social-btn {
-  line-height: 113.9%;
+  cursor: pointer;
+  margin-right: 0;
+  display: flex;
+}
+
+.wa-button {
+  width: 2.125vw;
+}
+
+.social-btn-1-2 {
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+}
+
+.tg-button {
+  width: 2.125vw;
+}
+
+.social-btn-1-3 {
+  line-height: 114.2%;
+  letter-spacing: -3%;
+  font-weight: medium;
   text-decoration: none;
-  font-family: var(--krona);
-  color: #2D2D2D;
-  padding: 8px 21.25px;
-  background: #D4D5DE;
-  border: 1px solid #2D2D2D;
-  border-radius: 23.5px;
-  font-size: 12px;
+  font-family: var(--montserrat);
+  color: #FFFFFF;
+  padding: 0.65vw 3.063vw;
+  background: #2D2D2D;
+  border-radius: 1vw;
+  font-size: 0.875vw;
   cursor: pointer;
   margin: 0;
   transition: 
@@ -511,16 +508,16 @@ body {
     transform 0.2s ease;
 }
 
-.social-btn:hover {
-  background-color: #2D2D2D;
-  color: #FFFFFF;
+.social-btn-1-3:hover {
+  background-color: #FFFFFF;
+  color: #2D2D2D;
 }
 
 
 
 .footer {
-  height: 488px;          
-  max-height: 488px;  
+  width: 100%;
+  height: 30.5vw;          
   background-color: #C9CAD4;
   padding: 0;
   margin: 0;
@@ -541,30 +538,30 @@ body {
 
 /* Левая часть футера */
 .footer-left {
-  padding-left: 65px;
-  padding-top: 40px;
+  padding-left: 4.063vw;
+  padding-top: 2.5vw;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1.563vw;
   margin-right: 0;
 }
 
 .start-project-btn {
+  font-size: 0.875vw;
   font-weight: 600;
   letter-spacing: -3%;
   line-height: 113.9%;
   font-family: var(--montserrat);
-  padding: 8.47px 20px;
+  padding: 0.6vw 1.66vw;
   background-color: #2D2D2D;
   color: #FFFFFF;
   border: none;
   border-radius: 14px;
-  width: 165px;
-  max-width: 165px;
+  width: 7vw;
   text-decoration: none;
-  padding-right: 0;
-  box-sizing: border-box;
   transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  justify-content: center;
 }
 
 .start-project-btn:hover {
@@ -574,14 +571,19 @@ body {
 
 .social-buttons {
   display: flex;
-  gap: 11px;
+  gap: 0.688vw;
 }
 
 .yt-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 6px;
+  margin-right: 0.375vw;
+}
+
+.yt-knopka {
+  width: 2.813vw;
+  height: 2vw;
 }
 
 .social-btn-2 {
@@ -589,11 +591,11 @@ body {
   text-decoration: none;
   font-family: var(--krona);
   color: #2D2D2D;
-  padding: 8px 21.25px;
+  padding: 0.52vw 1.32vw;
   background: #C9CAD4;
   border: 1px solid #2D2D2D;
   border-radius: 23.5px;
-  font-size: 12px;
+  font-size: 0.75vw;
   cursor: pointer;
   margin: 0;
   transition: 
@@ -607,9 +609,32 @@ body {
   color: #FFFFFF;
 }
 
+.social-btn-3 {
+  line-height: 113.9%;
+  text-decoration: none;
+  font-family: var(--krona);
+  color: #2D2D2D;
+  padding: 0.52vw 1.38vw;
+  background: #C9CAD4;
+  border: 1px solid #2D2D2D;
+  border-radius: 23.5px;
+  font-size: 0.75vw;
+  cursor: pointer;
+  margin: 0;
+  transition: 
+    color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.social-btn-3:hover {
+  background-color: #2D2D2D;
+  color: #FFFFFF;
+}
+
 /* Центральная часть футера */
 .footer-center {
-  padding-top: 46px;
+  padding-top: 2.875vw;
   text-align: left;
   width: 30%;
   padding-left: 350px;
@@ -620,35 +645,32 @@ body {
   line-height: 113.9%;
   font-weight: 500;
   width: 282.1px;
-  font-size: 14px;
+  font-size: 0.875vw;
   font-family: var(--montserrat);
   margin: 0 0 10px 0;
-  font-size: 14px;
   padding-bottom: 34px;
 }
 
 .contact-email, .contact-phone {
   line-height: 113.9%;
   font-weight: 500;
-    font-size: 15px;
-    font-family: var(--kufam);
+  font-size: 0.938vw;
+  font-family: var(--kufam);
   margin: 2px 0;
-  font-size: 16px;
   color: #2D2D2D;
 }
 
 .contact-phone {
-    text-decoration: underline;
-    padding-bottom: 33px;
+  text-decoration: underline;
+  padding-bottom: 33px;
 }
 
 .telegram-label {
   line-height: 113.9%;
   font-weight: 500;
     font-family: var(--montserrat);
-    font-size: 14px;
+    font-size: 0.875vw;
   margin: 5px 0 0 0;
-  font-size: 14px;
   color: #727272;
 }
 
@@ -657,40 +679,40 @@ body {
   font-weight: 500;
     font-family: var(--kufam);
     margin: 5px 0 0 0;
-  font-size: 15px;
+  font-size: 0.938vw;
   color: #2D2D2D;
 }
 
 /* Правая часть футера */
 .footer-right {
-  padding-top: 29px;
+  padding-top: 1.813vw;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
 .logo {
-  width: 90.94px;
-  height: 41px;
-  margin-bottom: 6.79px;
-  padding-right: 59px;
+  width: 5.684vw;
+  height: 2.563vw;
+  margin-bottom: 0.424vw;
+  padding-right: 3.688vw;
 }
 
 .copyright {
   margin: 0 0 0 0;
-  font-size: 10px;
+  font-size: 0.625vw;
   font-family: var(--krona);
   color: #2D2D2D;
-  margin-bottom: 20.02px;
-  padding-right: 59px;
+  margin-bottom: 1vw;
+  padding-right: 3.688vw;
 }
 
 .pdf-link {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 1.125vw;
   margin-right: 0;
-  padding-right: 15px;
+  padding-right: 1.375vw;
 }
 
 .pdf-desc {
@@ -698,8 +720,8 @@ body {
   line-height: 109%;
   font-weight: 500;
   font-family: var(--montserrat);
-  font-size: 12px;
-  width: 130.36px;
+  font-size: 0.75vw;
+  width: 8vw;
   flex-wrap: wrap;
 }
 
@@ -707,10 +729,10 @@ body {
   color: #2D2D2D;
   text-decoration: none;
   font-family: var(--kufam);
-  font-size: 15px;
+  font-size: 0.938vw;
   background-color: #FFFFFF;
-  border-radius: 9px;
-  padding: 9.5px 19.18px;
+  border-radius: 0.563vw;
+  padding: 0.716vw 1.393vw;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -727,21 +749,21 @@ body {
 }
 
 .agency-name {
-  height: 117.42px;
+  height: 7vw;
   line-height: 113.9%;
   font-family: var(--montserrat);
-  font-size: 96px;
+  font-size: 6vw;
   font-weight: normal;
   color: #2D2D2D;
   display: flex;
   align-items: center;
-  gap: 25px; /* Отступ между частями текста */
+  gap: 1.563vw; /* Отступ между частями текста */
 }
 
 .typing-animation {
   display: inline-block;
   font-family: var(--montserrat);
-  font-size: 96px;
+  font-size: 6vw;
   color: #2D2D2D;
   white-space: nowrap;
   overflow: hidden;
@@ -761,9 +783,11 @@ body {
 }
 
 .privacy-policy {
-  height: 19.04px;
+  font-weight: 400;
+  line-height: 114.2%;
+  letter-spacing: 0%;
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 0.875vw;
   font-family: var(--krona);
   color: #8A8A8A;
   text-decoration: none;
@@ -782,262 +806,3 @@ body {
 
 
 
-@media (max-width: 1440px) {
-  .photo-block {
-    width: 955px;
-    
-  }
-  
-  .row-1, .row-3 {
-    width: 970px;
-  }
-  
-  .photo-506 {
-    width: 340px;
-    height: 214px;
-  }
-  
-  .photo-1032 {
-    width: 700px;
-    height: 214px;
-  }
-  
-  .image-container {
-    margin-right: 14px;
-  }
-
-.button-group {
-    gap: 4px;
-  }
-
-  .btn-drk,
-  .btn-wht {
-    padding: 7px 10px;
-    font-size: 11px;
-    border-radius: 11px;
-  }
-
-  .footer-container {
-    gap: 20px;
-    padding: 0 20px;
-  }
-
-  .footer-left,
-  .footer-center,
-  .footer-right {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .start-project-btn {
-    font-size: 14px;
-    padding: 8px 24px;
-    width: 160px;
-    margin-bottom: 12px;
-  }
-
-  .company-slogan {
-    font-size: 12px;
-    line-height: 1.3;
-  }
-
-  .contact-email,
-  .contact-phone,
-  .telegram-label,
-  .copyright {
-    font-size: 11px;
-  }
-
-  .logo {
-    width: 60px;
-    height: auto;
-  }
-
-  .pdf-desc {
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 1367px) {
-.photo-block {
-    width: 900px;
-  }
-  
-  .row-1, .row-3 {
-    width: 912px;
-  }
-
-  .row-2 {
-    width: 900px;
-  }
-  
-  .photo-506 {
-    width: 290px;
-    height: 183px;
-  }
-  
-  .photo-1032 {
-    width: 600px;
-    height: 183px;
-  }
-  
-  .image-container {
-    margin-right: 12px;
-  }
-
-    .button-group {
-    gap: 3px;
-  }
-
-  .btn-drk,
-  .btn-wht {
-    padding: 6px 8px;
-    font-size: 12px;
-    border-radius: 10px;
-  }
-
-    .start-project-btn {
-    font-size: 14px;
-    padding: 6px 12px;
-    width: 100%;
-    max-width: 134px;
-  }
-}
-
-@media (max-width: 1280px) {
-  .photo-block {
-    width: 800px;
-  }
-  
-  .row-1, .row-3 {
-    width: 813px;
-  }
-
-  .row-2 {
-    width: 800px;
-  }
-  
-  .photo-506 {
-    width: 290px;
-    height: 183px;
-  }
-  
-  .photo-1032 {
-    width: 600px;
-    height: 183px;
-  }
-  
-  .image-container {
-    margin-right: 12px;
-  }
-
-    .button-group {
-    gap: 3px;
-  }
-
-  .btn-drk,
-  .btn-wht {
-    padding: 6px 8px;
-    font-size: 10px;
-    border-radius: 10px;
-  }
-
-    .start-project-btn {
-    font-size: 14px;
-    padding: 9px 20px;
-    width: 100%;
-    max-width: 150px;
-
-  }
-
-}
-
-
-@media (max-width: 1024px) {
-  .photo-block {
-    width: 500px;
-  }
-  
-  .row-1, .row-3 {
-    width: 520px;
-  }
-  
-  .photo-506 {
-    width: 240px;
-    height: 151px;
-  }
-  
-  .photo-1032 {
-    width: 500px;
-    height: 151px;
-  }
-  
-  .image-container {
-    margin-right: 10px;
-  }
-
-  .button-group {
-    gap: 2px;
-    flex-direction: column; /* Кнопки вертикально на узких экранах */
-    align-items: flex-start;
-  }
-
-  .btn-drk,
-  .btn-wht {
-    padding: 5px 7px;
-    font-size: 9px;
-    border-radius: 8px;
-    white-space: nowrap;
-  }
-
-  .footer {
-    padding-top: 30px;
-  }
-
-  .footer-container {
-    padding: 15px;
-  }
-
-  .start-project-btn {
-    font-size: 11px;
-    padding: 6px 12px;
-    width: 100%;
-    max-width: 200px;
-  }
-
-  .company-slogan {
-    font-size: 10px;
-    line-height: 1.25;
-  }
-
-  .contact-email,
-  .contact-phone,
-  .telegram-label {
-    font-size: 9px;
-  }
-
-  .copyright {
-    font-size: 8px;
-    margin-top: 8px;
-  }
-
-  .pdf-link {
-    gap: 3px;
-  }
-
-  .pdf-icon,
-  .pdf-desc {
-    font-size: 9px;
-  }
-
-  .social-buttons {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .yt-btn,
-  .social-btn-2 {
-    font-size: 9px;
-    padding: 5px 8px;
-  }
-}
