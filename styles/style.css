@@ -115,7 +115,7 @@ body {
 .image-container {
   position: relative;
   overflow: hidden;          /* главное: обрезаем изображение за пределами контейнера */
-  border-radius: 10px;        /* если нужно закругление */
+  border-radius: 0.75vw;        /* если нужно закругление */
   display: block;
   width: 68vw;
   height: 100%;
@@ -146,7 +146,7 @@ body {
   bottom: 19.1vw;      /* Отступ от нижнего края картинки */
   left: 0.5vw;     /* Отступ от правого края картинки */
   display: flex;
-  gap: 5px;        /* Расстояние между кнопками */
+  gap: 0.313vw;        /* Расстояние между кнопками */
   flex-direction:row; /* Кнопки вертикально */
 }
 
@@ -210,7 +210,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.25vw; 
-  padding-top: 1.063vw; 
+  padding-top: 1.375vw; 
   padding-right: 0.688vw;
   margin-left: 3.063vw;
 }
@@ -246,13 +246,14 @@ body {
     line-height: 113%;
   display: inline-flex;
   align-items: center;
-  padding: 0.544vw 0.792vw; 
+  padding: 0.444vw 0.584vw; 
   border: 1px solid #2D2D2D; 
   border-radius: 23.5px; 
   background-color: #D4D5DE; 
   color: #2D2D2D; 
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .telegram-link:hover {
@@ -261,7 +262,7 @@ body {
 }
 
 .right-static .logo-block {
-  margin-top: 0.375vw;
+  display: flex;
   align-items: center;
   margin-left: 0vw;
   margin-right: 7.313vw;
@@ -311,15 +312,15 @@ body {
 }
 
 .projects-filter h3 {
-  margin-top: 25px;
+  margin-top: 1.563vw;
   line-height: 114.2%;
   font-weight: 700;
   font-family: var(--montserrat);
-  margin-bottom: 20px;
+  margin-bottom: 1.25vw;
   font-size: 2.5vw;
   color: #333333;
   padding-left: 0vw;
-  padding-bottom: 0px;
+  padding-bottom: 0vw;
   text-transform: uppercase;
 }
 
@@ -330,7 +331,7 @@ body {
   flex-wrap: wrap;
   gap: 0.313vw;
   padding-left: 0vw;
-  padding-bottom: 292px;
+  padding-bottom: 21.625vw;
   width: 20vw;
   margin-left: 3.063vw;
 }
@@ -344,9 +345,9 @@ body {
   font-weight: 500;
   font-style: medium;
     font-family: var(--montserrat);
-  padding: 6.09px 15.33px;
+  padding: 0.38vw 0.96vw;
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 0.5vw;
   font-size: 0.875vw;
   transition: background-color 0.3s, ease, color 0.3s ease;
 }
@@ -365,9 +366,9 @@ body {
   font-weight: 500;
   font-style: medium;
     font-family: var(--montserrat);
-  padding: 6.09px 13.22px;
+  padding: 0.38vw 0.83vw;
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 0.5vw;
   font-size: 0.875vw;
   transition: background-color 0.3s, ease, color 0.3s ease;
 }
@@ -386,9 +387,9 @@ body {
   font-weight: 500;
   font-style: medium;
     font-family: var(--montserrat);
-  padding: 6.09px 11px;
+  padding: 0.38vw 0.7vw;
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 0.5vw;
   font-size: 0.875vw;
   transition: background-color 0.3s, ease, color 0.3s ease;
 }
@@ -407,9 +408,9 @@ body {
   font-weight: 500;
   font-style: medium;
     font-family: var(--montserrat);
-  padding: 6.09px 14px;
+  padding: 0.38vw 0.7vw;
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 0.5vw;
   font-size: 0.875vw;
   transition: background-color 0.3s, ease, color 0.3s ease;
 }
@@ -496,7 +497,7 @@ body {
   text-decoration: none;
   font-family: var(--montserrat);
   color: #FFFFFF;
-  padding: 0.65vw 3.063vw;
+  padding: 0.65vw 3.27vw;
   background: #2D2D2D;
   border-radius: 1vw;
   font-size: 0.875vw;
@@ -523,7 +524,6 @@ body {
   margin: 0;
   z-index: 10;
   position: relative;
-  width: 100%;
   left: 0;
   right: 0;
   box-sizing: border-box;
@@ -569,7 +569,7 @@ body {
   color: #2D2D2D;
 }
 
-.social-buttons {
+.social-buttons-2 {
   display: flex;
   gap: 0.688vw;
 }
@@ -637,18 +637,18 @@ body {
   padding-top: 2.875vw;
   text-align: left;
   width: 30%;
-  padding-left: 350px;
+  padding-left: 21.875vw;
 }
 
 .company-slogan {
   color: #2D2D2D;
   line-height: 113.9%;
   font-weight: 500;
-  width: 282.1px;
+  width: 17.625vw;
   font-size: 0.875vw;
   font-family: var(--montserrat);
-  margin: 0 0 10px 0;
-  padding-bottom: 34px;
+  margin: 0vw;
+  padding-bottom: 2.125vw;
 }
 
 .contact-email, .contact-phone {
@@ -656,13 +656,13 @@ body {
   font-weight: 500;
   font-size: 0.938vw;
   font-family: var(--kufam);
-  margin: 2px 0;
+  margin: 0.125vw 0;
   color: #2D2D2D;
 }
 
 .contact-phone {
   text-decoration: underline;
-  padding-bottom: 33px;
+  padding-bottom: 2.063vw;
 }
 
 .telegram-label {
@@ -670,7 +670,7 @@ body {
   font-weight: 500;
     font-family: var(--montserrat);
     font-size: 0.875vw;
-  margin: 5px 0 0 0;
+  margin: 0.313vw 0 0 0;
   color: #727272;
 }
 
@@ -678,7 +678,7 @@ body {
   line-height: 113.9%;
   font-weight: 500;
     font-family: var(--kufam);
-    margin: 5px 0 0 0;
+    margin: 0.313vw 0 0 0;
   font-size: 0.938vw;
   color: #2D2D2D;
 }
@@ -744,8 +744,8 @@ body {
 /* Нижний блок футера */
 .footer-bottom {
   text-align: left;
-  margin-top: 52px;
-  padding-left: 50px;
+  margin-top: 3.25vw;
+  padding-left: 3.125vw;
 }
 
 .agency-name {
@@ -786,7 +786,7 @@ body {
   font-weight: 400;
   line-height: 114.2%;
   letter-spacing: 0%;
-  margin-top: 10px;
+  margin-top: 0.625vw;
   font-size: 0.875vw;
   font-family: var(--krona);
   color: #8A8A8A;
@@ -799,10 +799,6 @@ body {
 .privacy-policy:hover {
   text-decoration: underline;
 }
-
-
-
-
 
 
 
