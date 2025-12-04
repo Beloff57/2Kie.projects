@@ -46,7 +46,6 @@ body {
 }
 
 .row-2 {
-
   text-align: center; /* Центрируем растянутое фото */
   margin-bottom: 0.375vw;
 }
@@ -283,6 +282,8 @@ body {
   margin-top: 0.4vw;
   display: inline-block; /* Чтобы корректно работали размеры */
   transition: transform 0.3s ease; /* Плавный переход для масштабирования */
+  display: flex;
+  align-items: center;
 }
 
 .icon-wrap-1 {
