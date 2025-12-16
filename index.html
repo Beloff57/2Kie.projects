@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+<div class="circle-btn">
+  <div class="circle-center">
+    <img src="images/Arrow 27.svg" alt="">
+  </div>
+
+  <svg class="circle-text" viewBox="0 0 200 200">
+    <defs>
+      <path
+        id="textCircle"
+        d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0"
+      />
+    </defs>
+
+    <text>
+      <textPath href="#textCircle" 
+      textLength="471"
+      lengthAdjust="spacing"
+      startOffset="0">
+      &nbsp;обсудить проект • обсудить проект •
+      </textPath>
+    </text>
+  </svg>
+</div>
     <div class="page-wrapper">
     <div class="left-scrollable">
     <div class="project-content-2">
@@ -15,15 +38,15 @@
       <div class="image-container">
         <img src="images/foto1.png" alt="Фото 1" class="photo-506" data-tooltip="Описание первой фотографии">
         <div class="button-group">
-          <a href="#" class="btn-wht">Branding</a>
-          <a href="#" class="btn-wht">Logo</a>
+          <a href="#" class="btn-wht">Брендинг</a>
+          <a href="#" class="btn-wht">Логотип</a>
         </div>
       </div>
       <div class="image-container">
         <img src="images/foto2.png" alt="Фото 2" class="photo-506" data-tooltip="Проект &quot;Hungry panda&quot;">
         <div class="button-group">
-          <a href="#" class="btn-wht">Branding</a>
-          <a href="#" class="btn-wht">Logo</a>
+          <a href="#" class="btn-wht">Брендинг</a>
+          <a href="#" class="btn-wht">Логотип</a>
         </div>
       </div>
     </div>
@@ -31,8 +54,8 @@
       <div class="image-container">
         <img src="images/foto3.png" alt="Фото 3 (растянутое)" class="photo-1032" data-tooltip-2="Описание третьей фотографии">
         <div class="button-group-2">
-          <a href="#" class="btn-wht">Branding</a>
-          <a href="#" class="btn-wht">Logo</a>
+          <a href="#" class="btn-wht">Брендинг</a>
+          <a href="#" class="btn-wht">Логотип</a>
         </div>
       </div>
     </div>
@@ -40,15 +63,15 @@
       <div class="image-container">
         <img src="images/foto4.png" alt="Фото 4" class="photo-506" data-tooltip="Описание четвёртой фотографии">
         <div class="button-group">
-          <a href="#" class="btn-drk">Design</a>
-          <a href="#" class="btn-drk">Logo</a>          
+          <a href="#" class="btn-drk">Дизайн</a>
+          <a href="#" class="btn-drk">Логотип</a>          
         </div>
       </div>
       <div class="image-container">
         <img src="images/foto5.png" alt="Фото 5" class="photo-506" data-tooltip="Описание пятой фотографии">
         <div class="button-group">
-          <a href="#" class="btn-drk">Branding</a>
-          <a href="#" class="btn-drk">Logo</a>
+          <a href="#" class="btn-drk">Брендинг</a>
+          <a href="#" class="btn-drk">Логотип</a>
         </div>
       </div>
     </div>
@@ -56,7 +79,7 @@
 </div>
     </div>
     <div class="right-static">
-  <div class="nav-wrapper">
+  <div class="nav-wrapper fade-on-scroll" data-fade-percent="0.50">
     <div class="logo-block">
         <img src="images/Group 17.svg" alt="2kie Digital Agency">
     </div>
@@ -67,7 +90,7 @@
     </div>
     <a href="" class="telegram-link">tg: @Art.2kie</a>
   </div>
-    <div class="projects-filter">
+    <div class="projects-filter fade-on-scroll" data-fade-percent="0.50">
       <div class="zag-proj">
       <h3>Проекты</h3>
         <a href="" class="ar-cont">
@@ -81,15 +104,19 @@
         <a href="" class="filter-btn-2">Брендинг</a>
         <a href="" class="filter-btn-3">Веб-сайты</a>
         <a href="" class="filter-btn-4">Иллюстрация</a>
+        <a href="" class="filter-btn">Логотип</a>
+        <a href="" class="filter-btn-3">Веб-сайты</a>
+        <a href="" class="filter-btn">Логотип</a>
+        <a href="" class="filter-btn-4">Иллюстрация</a>
       </div>
     </div>
-       <a href="#" class="price-mot-3">
+       <a href="#" class="price-mot-3 fade-on-scroll" data-fade-percent="0.40">
           Обсудить проект
           <div class="icon-wrap-2">
           <img src="images/Arrow 51.svg" class="arrow-icon-2" alt="">
           </div>
       </a>
-        <div class="contact-block">
+        <div class="contact-block fade-on-scroll" data-fade-percent="0.40">
             <div class="social-buttons">
             <a href="" class="social-btn">
               <img src="images/WA-Vector.svg" alt="" class="wa-button">
@@ -320,6 +347,96 @@ document.addEventListener('DOMContentLoaded', function() {
   // Первоначальная проверка видимости
   checkVisibility();
 });
+</script>
+<script>
+const fadeBlocks = document.querySelectorAll('.fade-on-scroll');
+
+window.addEventListener('scroll', () => {
+  const docHeight = document.documentElement.scrollHeight;
+
+  fadeBlocks.forEach(block => {
+
+    // если не указано — используем дефолт
+    const fadePercent = parseFloat(block.dataset.fadePercent) || 0.40;
+
+    const elementTopOnPage = window.scrollY + block.getBoundingClientRect().top;
+    const distanceToBottom = docHeight - elementTopOnPage;
+
+    const fadeThreshold = docHeight * fadePercent;
+
+    if (distanceToBottom <= fadeThreshold) {
+      block.style.opacity = '0';
+      block.style.pointerEvents = 'none';
+    } else {
+      block.style.opacity = '1';
+      block.style.pointerEvents = 'auto';
+    }
+  });
+});
+</script>
+<script>
+const circleText = document.querySelector('.circle-text');
+const circleBtn  = document.querySelector('.circle-btn');
+
+let lastScrollY = window.scrollY;
+let rotation = 0;
+let velocity = 0;
+
+// -----------------
+// НАСТРОЙКИ
+// -----------------
+const SCROLL_POWER = 0.02;   // влияние скролла
+const FRICTION = 0.9;       // мягкая инерция
+const HOVER_SHIFT = 70;      // насколько прокрутить при hover (градусы)
+const HOVER_EASE = 0.08;     // плавность наведения
+
+let hoverOffset = 0;
+let targetHoverOffset = 0;
+
+// -----------------
+// СКРОЛЛ
+// -----------------
+function onScroll() {
+  const currentY = window.scrollY;
+  const delta = currentY - lastScrollY;
+
+  velocity += delta * SCROLL_POWER;
+  lastScrollY = currentY;
+}
+
+// -----------------
+// HOVER
+// -----------------
+circleBtn.addEventListener('mouseenter', () => {
+  targetHoverOffset = HOVER_SHIFT;
+});
+
+circleBtn.addEventListener('mouseleave', () => {
+  targetHoverOffset = 0;
+});
+
+// -----------------
+// АНИМАЦИЯ
+// -----------------
+function animate() {
+  // основное вращение от скролла
+  rotation += velocity;
+  velocity *= FRICTION;
+
+  if (Math.abs(velocity) < 0.001) velocity = 0;
+
+  // плавный hover-сдвиг
+  hoverOffset += (targetHoverOffset - hoverOffset) * HOVER_EASE;
+
+  // итоговое вращение
+  const finalRotation = rotation + hoverOffset;
+  circleText.style.transform = `rotate(${finalRotation}deg)`;
+
+  requestAnimationFrame(animate);
+}
+
+window.addEventListener('scroll', onScroll);
+requestAnimationFrame(animate);
 </script>
 </body>
 </html>
